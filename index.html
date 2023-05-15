@@ -1,26 +1,90 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+<link rel="stylesheet" href="./css/style.css">
  <meta charset="UTF-8">
+ <title>css</title>
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>컴바인월드</title>
+ <style>
+  div { text-align: center; }
+  body {   /* 전체 테두리 크기 */
+    background-color: #f0f0f0;
+    padding: 5px;
+  }
+  #content { 
+    background-color: white;
+     border: 5px solid white;    /* 전체 테두리 위아래 간격 */
+     border-radius: 20px;          /* 전체 테두리 라운드 */
+     border-style: transparent;
+     padding: 5px;                 /* 전체 테두리 위아래 간격 */
+     text-align: center;
+   }
+   #title {
+     font-size: 35px;             /* 제목 글자 크기 */
+     margin-bottom: 20px;         /* 테투리 아래 간격 */
+     color: #1D8B15;
+     font-weight: bold;
+   }
+   #subtitle {
+     font-size: 13px;            /* 부제목 글자 크기 */
+     margin-bottom: 15px;        /* 부제목 아래 간격 */
+     color: #5A5A5A;
+     font-weight: lighter;
+   }
+   .button-container {
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+   }
+   .button {
+     border: none;
+     border-radius: 20px;         /* 버튼 라운드 */
+     color: white;
+     padding: 40px 150px;         /* 버튼 크기 */
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 22px;              /* 버튼 글자 크기 */
+     margin: 7px 10px;             /* 버튼 간 간격 */
+     cursor: pointer;
+     font-weight:bold
+   }
+   #damage-button {
+       background-color:#FFBB00
+   }
+   #levelup-button {
+       background-color:#FF9900
+   }
+
+@media screen and (max-width: 480px) {
+  .button-container {
+    flex-direction: column; /* added this line */
+  }
+  .button {
+  margin-bottom: 10px; /* added this line */
+  }
+}
+
+ </style>
 </head>
 <body>
- <h1>컴바인월드</h1>
- <p>메이플스토리의 각종 확률형 시스템에 대한 기댓값 계산기와 시뮬레이션 웹서비스입니다.</p>
- <p>문의는 help@mesu.live로 부탁드립니다.</p>
- <h2>설명란</h2>
- <p>컴바인월드의 딜 계산기와 레벨업 비용 계산기 웹서비스입니다.</p>
- <p>칸 아래 중간쪽에 딜량도르를 기준으로 하였습니다.</p>
- <h3>추가옵션 기댓값 계산기</h3>
- <p>딜 계산기로</p>
- <button id="myButton">클릭하세요</button>
- <h3>큐브 기댓값 계산기</h3>
- <p>여러영웅 딜 계산기로</p>
+ <div id="content">
+   <div id="title"><img src="./image/컴바인월드.png" class="radius_img_1"
+      alt="error" width="30">컴바인월드
+   <div id="subtitle">영웅 데미지 계산기 및 레벨업 비용 계산기 웹서비스입니다.</div>
+   <div class="button-container">
+     <button class="button" id="damage-button">영웅 데미지 계산기</button>
+     <button class="button" id="levelup-button">레벨업 비용 계산기</button>
+   </div>
+ </div>
 
  <script>
-   document.getElementById("myButton").addEventListener("click", function() {
+   document.getElementById("damage-button").addEventListener("click", function() {
+     window.location.href = "https://combine0.github.io/combine1.github.io/";
+   });
+   document.getElementById("levelup-button").addEventListener("click", function() {
      window.location.href = "https://combine0.github.io/combine2.github.io/";
    });
  </script>
