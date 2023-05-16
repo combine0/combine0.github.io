@@ -2,6 +2,8 @@
 <html lang="ko">
 <head>
 <link rel="stylesheet" href="./css/style.css">
+<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://kit.fontawesome.com/db9a61c6cd.js" crossorigin="anonymous"></script>
  <meta charset="UTF-8">
  <title>css</title>
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,11 +22,12 @@
      border-style: transparent;
      padding: 5px;                 /* 전체 테두리 위아래 간격 */
      text-align: center;
+     margin-top: 80px;            /* 컴바인월드를 아래로 이동 */
    }
    #title {
      font-size: 35px;             /* 제목 글자 크기 */
      margin-bottom: 20px;         /* 테투리 아래 간격 */
-     color: #1D8B15;
+     color: #05853C;
      font-weight: bold;
    }
    #subtitle {
@@ -32,11 +35,6 @@
      margin-bottom: 15px;        /* 부제목 아래 간격 */
      color: #5A5A5A;
      font-weight: lighter;
-   }
-   .button-container {
-     display: flex;
-     justify-content: center;
-     flex-wrap: wrap;
    }
    .button {
      border: none;
@@ -58,18 +56,22 @@
        background-color:#FF9900
    }
 
-@media screen and (max-width: 480px) {
-  .button-container {
-    flex-direction: column; /* added this line */
-  }
-  .button {
-  margin-bottom: 10px; /* added this line */
-  }
-}
-
  </style>
 </head>
 <body>
+  <div class="header"></div>
+  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+  <label for="openSidebarMenu" class="sidebarIconToggle">
+      <div class="spinner diagonal part-1"></div>
+      <div class="spinner horizontal"></div>
+      <div class="spinner diagonal part-2"></div>
+  </label>
+  <div id="sidebarMenu">
+      <ul class="sidebarMenuInner">
+          <li><a href="https://combine0.github.io/combine1.github.io/" target="_blank"><i class="fa-solid fa-calculator fa-xl"></i> 영웅 데미지 계산기</a></li>
+          <li><a href="https://combine0.github.io/combine2.github.io/" target="_blank"><i class="fa-solid fa-user fa-xl"></i> 영웅 레벨업 계산기</a></li>
+      </ul>
+  </div>
  <div id="content">
    <div id="title"><img src="./image/컴바인월드.png" class="radius_img_1"
       alt="error" width="30">컴바인월드
@@ -87,6 +89,18 @@
    document.getElementById("levelup-button").addEventListener("click", function() {
      window.location.href = "https://combine0.github.io/combine2.github.io/";
    });
+
+        // 메뉴가 열리면 반응형 이벤트 추가
+    document.getElementById("openSidebarMenu").addEventListener("change", function() {
+    if (this.checked) {
+        // 메뉴가 열리면 오른쪽으로 밀기
+        document.getElementById("content").style.marginLeft = "250px";
+    } else {
+        // 메뉴가 닫히면 원래 위치로 다시 이동
+        document.getElementById("content").style.marginLeft = "0";
+    }
+});
  </script>
+<body>
 </body>
 </html>
