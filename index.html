@@ -35,41 +35,47 @@
      color: #5A5A5A;
      font-weight: lighter;
    }
-   .button {
-     border: none;
-     border-radius: 20px;         /* 버튼 라운드 */
-     color: white;
-     padding: 35px 150px;         /* 버튼 크기 */
-     text-align: center;
-     text-decoration: none;
-     display: inline-block;
-     font-size: 25px;              /* 버튼 글자 크기 */
-     margin: 7px 10px;             /* 버튼 간 간격 */
-     cursor: pointer;
-     font-weight:bold
-   }
+  .button {
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 35px 150px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  margin: 7px 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
 
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@media screen and (max-width: 992px) {
   .button-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
+    padding: 0.8rem;
+    font-size: 20px;
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  @media screen and (max-width: 600px) {
+ }
+  @media screen and (min-width: 768px) {
     .button-container {
-      padding: 0.8rem;
+      width: 100%;
       font-size: 20px;
-      flex-direction: column;
-      align-items: flex-start;
     }
   }
-   #damage-button {
-       background-color:#FFBB00
-   }
-   #levelup-button {
-       background-color:#FF9900
-   }
+ #damage-button {
+  background-color: #FFBB00;
+ }
+ #levelup-button {
+  background-color: #FF9900;
+ }
 
  </style>
 </head>
