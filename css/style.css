@@ -1,32 +1,39 @@
-
-.radius_img_1 {
+.radius_img_1 {                  /* 메뉴 옆 이미지 */
+    border-radius: 35%;
+    margin-left: 45px;
+    margin-top: 10px;
+    display: block;
+    position: fixed;
+}
+.radius_img_2 {                  /* 중간에 있는 이미지 */
     border-radius: 35%;
 }
-
-#damage-button:hover {
-    background-color: #dda405;
+#titlee {                         /* 메뉴 옆 제목 */
+    font-size: 25px;             /* 제목 글자 크기 */
+    height: 100%;
+    width: 300px;
+    margin-left: 0px;         /* 테두리 좌우 간격 */
+    margin-top: 8px;         /* 테두리 아래 간격 */
+    font-weight: bold;
+    display: block;
+    position: fixed;
+    color: #05853C;
+  }
+.sidebarMenuInner:hover {         /* 메뉴 아래 버튼에 가져다대면 색 변경 */
+    background-color: #FAECC5; 
+    border-radius: 5%;
 }
-
-#levelup-button:hover {
-    background-color: #b67a03;
-}
-
 .button-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-
-.radius_img_1 {
-    border-radius: 35%;
-}
-
-#damage-button:hover {
+#damage-button:hover {            /* 데미지 버튼 버튼에 가져다대면 색 변경 */
     background-color: #dda405;
 }
 
-#levelup-button:hover {
+#levelup-button:hover {          /* 레벨업 버튼에 가져다대면 색 변경 */
     background-color: #b67a03;
 }
 
