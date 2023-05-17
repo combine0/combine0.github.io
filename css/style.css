@@ -18,6 +18,10 @@
     display: block;
     color: #05853C;
   }
+  .button {
+  white-space: nowrap;
+  flex-grow: 1;
+  }
 .sidebarMenuInner:hover {         /* 메뉴 아래 버튼에 가져다대면 색 변경 */
     background-color: #FAECC5; 
     border-radius: 5%;
